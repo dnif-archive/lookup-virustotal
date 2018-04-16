@@ -46,7 +46,7 @@ def get_url_report(inward_array,var_array):
             try:
                 i['$VTPositives'] = json_response['positives']
             except Exception:
-                pass
+                i['$VTPositives'] = 0
             try:
                 i['$VTResponseCode'] = json_response['response_code']
             except Exception:
@@ -70,9 +70,9 @@ def get_url_report(inward_array,var_array):
                         arr_true.append(key)
                     else:
                         arr_false.append(key)
-                if arr_true != []:
+                if len(arr_true) > 0:
                     i['$VTPositive'] = arr_true
-                if arr_false != []:
+                if len(arr_false) >0:
                     i['$VTNegative'] = arr_false
             except Exception:
                 pass
@@ -265,7 +265,7 @@ def get_filehash_report(inward_array,var_array):
             try:
                 i['$VTPositives'] = json_response['positives']
             except Exception:
-                pass
+                i['$VTPositives']=0
             try:
                 i['$VTResponseCode'] = json_response['response_code']
             except Exception:
@@ -293,8 +293,10 @@ def get_filehash_report(inward_array,var_array):
                         arr_true.append(key)
                     else:
                         arr_false.append(key)
-                i['$VTPositives'] = arr_true
-                i['$VTNegative'] = arr_false
+                if len(arr_true)>0:
+                    i['$VTPositives'] = arr_true
+                if len(arr_false)>0:
+                    i['$VTNegative'] = arr_false
             except Exception, e:
                 pass
     return inward_array
