@@ -147,7 +147,7 @@ The VirusTotal API is found on github at
 #### Getting started with VirusTotal API and DNIF
 
 1. #####    Login to your Data Store, Correlator, and A10 containers.  
-   ACCESS DNIF CONTAINER VIA SSH : [Click To Know How](https://dnif.it/docs/guides/tutorials/access-dnif-container-via-    ssh.html)
+   [ACCESS DNIF CONTAINER VIA SSH](https://dnif.it/docs/guides/tutorials/access-dnif-container-via-ssh.html)
 2. #####    Move to the ‘/dnif/<Deployment-key/lookup_plugins’ folder path.
 ```
 $cd /dnif/CnxxxxxxxxxxxxV8/lookup_plugins/
