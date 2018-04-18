@@ -294,7 +294,7 @@ def get_filehash_report(inward_array,var_array):
                     else:
                         arr_false.append(key)
                 if len(arr_true)>0:
-                    i['$VTPositives'] = arr_true
+                    i['$VTPositive'] = arr_true
                 if len(arr_false)>0:
                     i['$VTNegative'] = arr_false
             except Exception, e:
