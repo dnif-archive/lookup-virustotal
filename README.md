@@ -158,9 +158,9 @@ git clone https://github.com/dnif/lookup-virustotal.git virustotal
 ```
 4. #####   Move to the ‘/dnif/<Deployment-key/lookup_plugins/virustotal/’ folder path and open dnifconfig.yml configuration file     
     
-   Replace the tag:<Add_your_apik_key_here> with your VirusTotal api key
+   Replace the tag:<Add_your_api_key_here> with your VirusTotal api key
 ```
 lookup_plugin:
-  VT_API_KEY: <Add_your_apik_key_here>
+  VT_API_KEY: <Add_your_api_key_here>
 
 ```
