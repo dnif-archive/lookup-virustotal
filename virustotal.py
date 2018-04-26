@@ -247,15 +247,15 @@ def get_filehash_report(inward_array,var_array):
             except Exception, e:
                 print 'Api Request Error %s' %e
             try:
-                i['$VTmd5'] = str(json_response['md5']).upper()
+                i['$VTmd5'] = json_response['md5']
             except Exception:
                 pass
             try:
-                i['$VTsha1'] = str(json_response['sha1']).upper()
+                i['$VTsha1'] = json_response['sha1']
             except Exception:
                 pass
             try:
-                i['$VTsha256'] =str(json_response['sha256']).upper()
+                i['$VTsha256'] = json_response['sha256']
             except Exception:
                 pass
             try:
