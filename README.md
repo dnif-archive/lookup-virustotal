@@ -45,7 +45,7 @@ The Lookup call returns output in the following structure for available data
 |:------------- |:-------------|
 | $VTURL      | URL being queried |
 | $VTPermalink      | Permalink of report stored in VirusTotal |
-| $VTResponseCode | If the queried url is present in VirusTotal database it returns 1 ,if absent returns 0 and if the requested item is still queued for analysis it will be -2 |
+| $VTResponseCode | If the queried url is absent in VirusTotal database it returns 0  and if the requested item is still queued for analysis it will be -2 |
 | $VTTotal | Count of positive and negative detections |
 | $VTSystemTstamp | Scan Date |
 | $VTMessage | Verbose message of url being successfully queued up for scan |
@@ -106,7 +106,7 @@ The Lookup call returns output in the following structure for available data
 | $VTCN | Country |
 | $VTCommunicatingSamples | SHA256 of files that communicate with the queried ip address  |
 | $VTDownloadedSamples  | SHA256 of files that downloaded from the queried ip address |
-| $VTResponseCode | If the queried domain is present in VirusTotal database it returns 1 ,if absent returns 0 and if the submitted IP address is invalid -1. |
+| $VTResponseCode | If the queried IP address is present in VirusTotal database it returns 1 ,if absent returns 0 and if the submitted IP address is invalid -1. |
 
 
 
@@ -133,7 +133,7 @@ The Lookup call returns output in the following structure for available data
 | $VTPositive | List of scans returning positive detection |
 | $VTNegative | List of scans returning negative detection |
 | $VTPositives | Count of positive detection |
-| $VTResponseCode | If the queried url is present in VirusTotal database it returns 1 ,if absent returns 0 and if the requested item is still queued for analysis it will be -2 |
+| $VTResponseCode | If the queried item is present in VirusTotal database it returns 1 ,if absent returns 0 and if the requested item is still queued for analysis it will be -2 |
 | $VTTotal | Count of positive and negative detections |
 | $VTSystemTstamp | Scan Date |
 
@@ -158,9 +158,9 @@ git clone https://github.com/dnif/lookup-virustotal.git virustotal
 ```
 4. #####   Move to the ‘/dnif/<Deployment-key/lookup_plugins/virustotal/’ folder path and open dnifconfig.yml configuration file     
     
-   Replace the tag:<Add_your_apik_key_here> with your VirusTotal api key
+   Replace the tag: <Add_your_api_key_here> with your VirusTotal api key
 ```
 lookup_plugin:
-  VT_API_KEY: <Add_your_apik_key_here>
+  VT_API_KEY: <Add_your_api_key_here>
 
 ```
